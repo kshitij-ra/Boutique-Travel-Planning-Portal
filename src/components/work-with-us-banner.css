@@ -1,0 +1,106 @@
+.work-with-us-banner-work-with-us-banner {
+  width: 100%;
+  display: flex;
+  grid-gap: var(--dl-space-space-doubleunit);
+  position: relative;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin-top: var(--dl-space-space-doubleunit);
+  align-items: flex-start;
+  margin-bottom: var(--dl-space-space-doubleunit);
+  flex-direction: row;
+  justify-content: space-between;
+}
+.work-with-us-banner-container {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  align-self: center;
+  border-radius: var(--dl-radius-radius-radius8);
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(217, 217, 217, 0.26);
+}
+.work-with-us-banner-container1 {
+  width: auto;
+  height: auto;
+  display: flex;
+  padding: var(--dl-space-space-halfunit);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.work-with-us-banner-text1 {
+  color: var(--dl-color-gray-500);
+}
+.work-with-us-banner-container2 {
+  flex: 0 0 auto;
+  width: 55%;
+  height: auto;
+  display: flex;
+  align-items: space-between;
+  padding-top: var(--dl-space-space-halfunit);
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-halfunit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-halfunit);
+  justify-content: center;
+  border-top-width: 0px;
+  border-left-width: 1px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+}
+.work-with-us-banner-container3 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.work-with-us-banner-text5 {
+  color: var(--dl-color-gray-500);
+  align-self: center;
+  margin-bottom: var(--dl-space-space-unit);
+}
+.work-with-us-banner-container4 {
+  flex: 0 0 auto;
+  width: auto;
+  display: flex;
+  padding: var(--dl-space-space-halfunit);
+  align-items: center;
+  justify-content: space-between;
+}
+.work-with-us-banner-navlink {
+  display: contents;
+}
+.work-with-us-banner-component {
+  text-decoration: none;
+}
+.work-with-us-banner-text6 {
+  color: var(--dl-color-gray-500);
+}
+.work-with-us-banner-navlink1 {
+  display: contents;
+}
+.work-with-us-banner-component1 {
+  text-decoration: none;
+}
+
+
+
+
+
+
+@media(max-width: 991px) {
+  .work-with-us-banner-work-with-us-banner {
+    justify-content: center;
+  }
+  .work-with-us-banner-container4 {
+    flex-wrap: wrap;
+  }
+}

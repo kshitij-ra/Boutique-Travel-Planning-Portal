@@ -1,0 +1,22 @@
+import React from 'react'
+
+import { Helmet } from 'react-helmet'
+
+import './packages-builder.css'
+
+const PackagesBuilder = (props) => {
+  return (
+    <div className="packages-builder-container">
+      <Helmet>
+        <title>Packages-Builder - T84 Travel Agency</title>
+        <meta
+          property="og:title"
+          content="Packages-Builder - T84 Travel Agency"
+        />
+      </Helmet>
+      <span>Todo: create package builder</span>
+    </div>
+  )
+}
+
+export default PackagesBuilder
