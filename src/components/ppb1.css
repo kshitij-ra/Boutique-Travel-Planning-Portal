@@ -1,0 +1,69 @@
+.ppb1-ppb1 {
+    width: 100%;
+    display: flex;
+    grid-gap: var(--dl-space-space-doubleunit);
+    position: relative;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    align-self: center;
+    margin-top: var(--dl-space-space-doubleunit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-doubleunit);
+    flex-direction: row;
+    justify-content: center;
+  }
+  .ppb1-text {
+    height: 100%;
+    align-self: flex-start;
+  }
+  .ppb1-text01 {
+    text-align: justify;
+  }
+  .ppb1-text06 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .ppb1-text10 {
+    font-style: normal;
+    font-weight: 700;
+  }
+  .ppb1-text16 {
+    font-style: normal;
+    font-weight: 700;
+  }
+  .ppb1-text22 {
+    font-style: normal;
+    font-weight: 700;
+  }
+  .ppb1-text28 {
+    font-style: normal;
+    font-weight: 700;
+  }
+  .ppb1-text32 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .ppb1-text35 {
+    font-style: normal;
+    font-weight: 700;
+  }
+  .ppb1-text37 {
+    font-style: normal;
+    font-weight: 700;
+  }
+  .ppb1-text41 {
+    font-style: normal;
+    font-weight: 700;
+  }
+  .ppb1-text45 {
+    font-style: normal;
+    font-weight: 700;
+  }
+  @media(max-width: 991px) {
+    .ppb1-ppb1 {
+      justify-content: center;
+    }
+  }
+  

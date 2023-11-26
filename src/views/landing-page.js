@@ -178,6 +178,8 @@ const LandingPage = (props) => {
         </div>
       </div>
       <div id="main-section" className="landing-page-main">
+	      {!loading ? (
+        <>
         <h1>Top Rated Destinations</h1>
         <span className="landing-page-text07">Recommended</span>
         <div className="landing-page-destination-cards-container">
@@ -236,6 +238,10 @@ const LandingPage = (props) => {
             className="landing-page-component10"
           ></SolidButton>
         </Link>
+        </>
+      ) : (
+        <LoadingSpinner />
+    )}
         <WorkWithUsBanner></WorkWithUsBanner>
       </div>
       <Footer rootClassName="footer-root-class-name2"></Footer>

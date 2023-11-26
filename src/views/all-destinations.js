@@ -204,17 +204,20 @@ const AllDestinations = (props) => {
 	  <PlaceCard
             card_title="London"
           ></PlaceCard> */}
-	  {!loading ? 
-    destinations.map((destination) => (
-<PlaceCard
-            card_title={destination.id}
-            description={destination.title}
-          ></PlaceCard>
-                
-            ))
-            : (
-              <LoadingSpinner />
-            )}
+	  {!loading ? (
+    <>
+        {destinations.map((destination) => (
+            <PlaceCard
+                key={destination.id}  // Adding a unique key for each iteration
+                card_title={destination.id}
+                description={destination.title}
+            ></PlaceCard>
+        ))}
+    </>
+) : (
+    <LoadingSpinner />
+)}
+
 	</div>
         <WorkWithUsBanner rootClassName="work-with-us-banner-root-class-name"></WorkWithUsBanner>
       </div>

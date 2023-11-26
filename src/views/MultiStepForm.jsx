@@ -1,5 +1,9 @@
 import StepWizard from "react-step-wizard";
 import { useState } from "react";
+import SolidButton from '../components/solid-button.js'
+import OutlineButton from '../components/outline-button.js'
+import PPB1 from '../components/ppb1'
+
 
 const Nav = (props) => {
   const dots = [];
@@ -32,47 +36,34 @@ const Nav = (props) => {
 };
 
 const Stats = ({ nextStep, previousStep, totalSteps, step }) => (
-  <div>
+  <div style={{ display: "flex",flexDirection: "row", alignItems: "space-between"}}>
     <hr />
     {step > 1 && (
-      <button
-        style={{
-          padding: "5px 8px",
-          backgroundColor: "#333333",
-          borderRadius: 3,
-          color: "white",
-        }}
-        onClick={previousStep}
-      >
-        Go Back
-      </button>
-    )}
-    {step < totalSteps ? (
-      <button
-        onClick={nextStep}
-        style={{
-          padding: "5px 8px",
-          backgroundColor: "#333333",
-          borderRadius: 3,
-          color: "white",
-        }}
-      >
-        Continue
-      </button>
-    ) : (
-      <button
-        onClick={nextStep}
-        style={{
-          padding: "5px 8px",
-          backgroundColor: "green",
-          borderRadius: 3,
-          color: "white",
-          marginLeft: 5,
-        }}
-      >
-        Finish
-      </button>
-    )}
+  <OutlineButton
+    onClick={previousStep}
+    button1="Go Back"
+  />
+)}
+{step < totalSteps ? (
+  step === 1 ? (
+    <SolidButton
+      onClick={nextStep}
+      button="Start"
+    />
+  ) : (
+    <OutlineButton
+      onClick={nextStep}
+      button1="Continue"
+    />
+  )
+) : (
+  <SolidButton
+    onClick={nextStep}
+    button="Finish"
+  />
+)}
+
+
   </div>
 );
 
@@ -112,7 +103,7 @@ const FirstStep = (props) => {
 
   return (
     <>
-      <form style={formStyle}>
+      {/* <form style={formStyle}>
         <label
           style={{
             display: "block",
@@ -133,7 +124,8 @@ const FirstStep = (props) => {
           style={inputStyle}
           onChange={handleChange}
         />
-      </form>
+      </form> */}
+      <PPB1 />
       <Stats step={1} {...props} />
     </>
   );
@@ -172,7 +164,7 @@ const MultiStepForm = () => {
   console.log(formState);
   return (
     <div style={{ margin: "10px 0" }}>
-      <StepWizard nav={<Nav />}>
+      <StepWizard >
         <FirstStep setFormState={setFormState} />
         <SecondStep setFormState={setFormState} formState={formState}/>
       </StepWizard>
