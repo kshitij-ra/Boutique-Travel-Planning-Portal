@@ -14,6 +14,11 @@
   position: relative;
   align-items: center;
   flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 1px;
 }
 .all-destinations-navbar {
   width: 100%;
@@ -234,8 +239,8 @@
   padding-right: var(--dl-space-space-doubleunit);
   flex-direction: column;
   padding-bottom: var(--dl-space-space-quadruple);
-  justify-content: flex-start;
-  border-top-width: 1px;
+  justify-content: center;
+  border-top-width: 0px;
   border-left-width: 0px;
   border-right-width: 0px;
   border-bottom-width: 0px;
@@ -247,10 +252,10 @@
   flex-wrap: wrap;
   max-width: 1000px;
   margin-top: var(--dl-space-space-doubleunit);
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: var(--dl-space-space-doubleunit);
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 @media(max-width: 991px) {
   .all-destinations-hero {

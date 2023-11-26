@@ -19,30 +19,25 @@ import PackagesBuilder from './views/packages-builder'
 import LocalGuides from './views/local-guides'
 import NotFound from './views/not-found'
 import Test from './views/test'
+import Admin from './views/admin'
 
 const App = () => {
   return (
     <Router>
       <Switch>
         <Route component={Contact} exact path="/contact" />
-        <Route
-          component={ExperienceProviderReg}
-          exact
-          path="/experience-provider-reg"
-        />
+        <Route component={ExperienceProviderReg} exact path="/experience-provider-reg"/>
         <Route component={LandingPage} exact path="/" />
-        <Route
-          component={DestinationDetails}
-          exact
-          path="/destination-details"
-        />
+        <Route component={DestinationDetails} exact path="/destination-details"/>
         <Route component={AboutUs} exact path="/about-us" />
         <Route component={LocalGuideReg} exact path="/local-guide-reg" />
         <Route component={AllDestinations} exact path="/all-destinations" />
         <Route component={PackagesBuilder} exact path="/packages-builder" />
         <Route component={LocalGuides} exact path="/local-guides" />
         <Route component={Test} exact path="/test" />
+        <Route component={Admin} exact path="/admin" />
         <Route component={NotFound} path="**" />
+        
         <Redirect to="**" />
       </Switch>
     </Router>

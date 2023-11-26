@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Helmet } from 'react-helmet'
-
+import LoadingSpinner from '../components/loading-spinner.js'
 import SolidButton from '../components/solid-button'
 import PlaceCardNoButton from '../components/place-card-no-button'
 import WorkWithUsBanner from '../components/work-with-us-banner'
@@ -14,21 +14,26 @@ const LandingPage = (props) => {
 
   const [topDestinations, setTopDestinations] = useState([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const topGuidesResponse = await axios.get('https://dummyjson.com/products');
-                setTopGuides(topGuidesResponse.data.products);
+  const [loading, setLoading] = useState(true);
 
-                const topDestinationsResponse = await axios.get('https://dummyjson.com/products');
-                setTopDestinations(topDestinationsResponse.data.products);
-            } catch (error) {
-                console.error('Error fetching data', error);
-            }
-        };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const topGuidesResponse = await axios.get('https://dummyjson.com/products');
+        setTopGuides(topGuidesResponse.data.products);
 
-        fetchData();
-    }, []);
+        const topDestinationsResponse = await axios.get('https://dummyjson.com/products');
+        setTopDestinations(topDestinationsResponse.data.products);
+      } catch (error) {
+        console.error('Error fetching data', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+        fetchData();        
+        
+      }, []);
+
   return (
     <div className="landing-page-container">
       <Helmet>
@@ -176,7 +181,7 @@ const LandingPage = (props) => {
         <h1>Top Rated Destinations</h1>
         <span className="landing-page-text07">Recommended</span>
         <div className="landing-page-destination-cards-container">
-          <PlaceCardNoButton
+          {/* <PlaceCardNoButton
             card_title={topDestinations[3].title}
             description={topDestinations[3].description}
             description1={topDestinations[3].title}
@@ -193,7 +198,7 @@ const LandingPage = (props) => {
             description={topDestinations[5].description}
             description1={topDestinations[5].title}
             rootClassName="place-card-no-button-root-class-name7"
-          ></PlaceCardNoButton>
+          ></PlaceCardNoButton> */}
         </div>
         <Link to="/all-destinations" className="landing-page-navlink09">
           <SolidButton
@@ -205,7 +210,7 @@ const LandingPage = (props) => {
         <h1 className="landing-page-text08">Top Rated Local Guides</h1>
         <span className="landing-page-text09">Loved by our customers</span>
         <div className="landing-page-lg-cards-container">
-          <PlaceCardNoButton
+          {/* <PlaceCardNoButton
             card_title={topGuides[0].title}
             description={topGuides[0].title}
             description1={topGuides[0].description}
@@ -222,7 +227,7 @@ const LandingPage = (props) => {
             description={topGuides[2].title}
             description1={topGuides[2].description}
             rootClassName="place-card-no-button-root-class-name11"
-          ></PlaceCardNoButton>
+          ></PlaceCardNoButton> */}
         </div>
         <Link to="/local-guides" className="landing-page-navlink10">
           <SolidButton

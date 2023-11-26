@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Helmet } from 'react-helmet'
-
+import LoadingSpinner from '../components/loading-spinner.js'
 import SolidButton from '../components/solid-button'
 import PlaceCardNoButton from '../components/place-card-no-button'
 import WorkWithUsBanner from '../components/work-with-us-banner'
@@ -11,6 +11,8 @@ import './local-guides.css'
 
 const LocalGuides = (props) => {
   	const [guides, setGuides] = useState([]);
+    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         const fetchGuides = async () => {
@@ -19,11 +21,13 @@ const LocalGuides = (props) => {
                 setGuides(response.data.products);
             } catch (error) {
                 console.error('Error fetching local guides', error);
+            } finally {
+              setLoading(false);
             }
         };
-
         fetchGuides();
     }, []);
+
   return (
     <div className="local-guides-container">
       <Helmet>
@@ -175,7 +179,7 @@ const LocalGuides = (props) => {
       </div>
       <div id="main-section" className="local-guides-main">
         <div className="local-guides-cards-container">
-          <PlaceCardNoButton
+          {/* <PlaceCardNoButton
             card_title="Name"
             description="Location: "
             description1="Rating: "
@@ -192,15 +196,19 @@ const LocalGuides = (props) => {
             description="Location: "
             description1="Rating: "
             rootClassName="place-card-no-button-root-class-name4"
-          ></PlaceCardNoButton>
-          {guides.map((guide) => (
+          ></PlaceCardNoButton> */}
+          {!loading ? 
+          guides.map((guide) => (
 <PlaceCardNoButton
             card_title={guide.id}
             description={guide.title}
 	    description1="more text"
           ></PlaceCardNoButton>
                 
-            ))}
+            ))
+            : (
+              <LoadingSpinner />
+            )}
         </div>
         <WorkWithUsBanner rootClassName="work-with-us-banner-root-class-name1"></WorkWithUsBanner>
       </div>

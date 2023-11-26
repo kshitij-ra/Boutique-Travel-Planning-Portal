@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Helmet } from 'react-helmet'
-
+import LoadingSpinner from '../components/loading-spinner.js'
 import SolidButton from '../components/solid-button'
 import PlaceCard from '../components/place-card'
 import WorkWithUsBanner from '../components/work-with-us-banner'
@@ -11,6 +11,7 @@ import './all-destinations.css'
 
 const AllDestinations = (props) => {
 	const [destinations, setDestinations] = useState([]);
+  const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchDestinations = async () => {
@@ -19,9 +20,10 @@ const AllDestinations = (props) => {
                 setDestinations(response.data.products);
             } catch (error) {
                 console.error('Error fetching destinations', error);
+            } finally {
+              setLoading(false);
             }
         };
-
         fetchDestinations();
     }, []);
   return (
@@ -193,7 +195,7 @@ const AllDestinations = (props) => {
       <div id="main-section" className="all-destinations-main">
         <h1>Explore all destinations</h1>
 	<div className="all-destinations-cards-container">
-	  <PlaceCard
+	  {/* <PlaceCard
             card_title="London"
           ></PlaceCard>
 	  <PlaceCard
@@ -201,14 +203,18 @@ const AllDestinations = (props) => {
           ></PlaceCard>
 	  <PlaceCard
             card_title="London"
-          ></PlaceCard>
-	  {destinations.map((destination) => (
+          ></PlaceCard> */}
+	  {!loading ? 
+    destinations.map((destination) => (
 <PlaceCard
             card_title={destination.id}
             description={destination.title}
           ></PlaceCard>
                 
-            ))}
+            ))
+            : (
+              <LoadingSpinner />
+            )}
 	</div>
         <WorkWithUsBanner rootClassName="work-with-us-banner-root-class-name"></WorkWithUsBanner>
       </div>

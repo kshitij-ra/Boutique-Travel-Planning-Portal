@@ -15,6 +15,11 @@
   align-items: center;
   margin-bottom: var(--dl-space-space-doubleunit);
   flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 1px;
 }
 .local-guide-reg-navbar {
   width: 100%;
@@ -248,7 +253,7 @@
   flex-direction: column;
   padding-bottom: var(--dl-space-space-quadruple);
   justify-content: flex-start;
-  border-top-width: 1px;
+  border-top-width: 0px;
   border-left-width: 0px;
   border-right-width: 0px;
   border-bottom-width: 0px;
