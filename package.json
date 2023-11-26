@@ -9,7 +9,8 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-step-wizard": "^5.3.11"
   },
   "scripts": {
     "start": "craco start",
@@ -18,7 +19,7 @@
     "eject": "craco eject"
   },
   "engines": {
-    "node": "18.x"
+    "node": "20.x"
   },
   "browserslist": {
     "production": [

@@ -177,21 +177,21 @@ const LandingPage = (props) => {
         <span className="landing-page-text07">Recommended</span>
         <div className="landing-page-destination-cards-container">
           <PlaceCardNoButton
-            card_title={topDestinations[3].title}
-            description={topDestinations[3].description}
-            description1={topDestinations[3].title}
+            card_title={topDestinations[3]?.title}
+            description={topDestinations[3]?.description}
+            description1={topDestinations[3]?.title}
             rootClassName="place-card-no-button-root-class-name6"
           ></PlaceCardNoButton>
           <PlaceCardNoButton
-            card_title={topDestinations[4].title}
-            description={topDestinations[4].description}
-            description1={topDestinations[4].title}
+            card_title={topDestinations[4]?.title}
+            description={topDestinations[4]?.description}
+            description1={topDestinations[4]?.title}
             rootClassName="place-card-no-button-root-class-name8"
           ></PlaceCardNoButton>
           <PlaceCardNoButton
-            card_title={topDestinations[5].title}
-            description={topDestinations[5].description}
-            description1={topDestinations[5].title}
+            card_title={topDestinations[5]?.title}
+            description={topDestinations[5]?.description}
+            description1={topDestinations[5]?.title}
             rootClassName="place-card-no-button-root-class-name7"
           ></PlaceCardNoButton>
         </div>
@@ -206,21 +206,21 @@ const LandingPage = (props) => {
         <span className="landing-page-text09">Loved by our customers</span>
         <div className="landing-page-lg-cards-container">
           <PlaceCardNoButton
-            card_title={topGuides[0].title}
-            description={topGuides[0].title}
-            description1={topGuides[0].description}
+            card_title={topGuides[0]?.title}
+            description={topGuides[0]?.title}
+            description1={topGuides[0]?.description}
             rootClassName="place-card-no-button-root-class-name9"
           ></PlaceCardNoButton>
           <PlaceCardNoButton
-            card_title={topGuides[1].title}
-            description={topGuides[1].title}
-            description1={topGuides[1].description}
+            card_title={topGuides[1]?.title}
+            description={topGuides[1]?.title}
+            description1={topGuides[1]?.description}
             rootClassName="place-card-no-button-root-class-name10"
           ></PlaceCardNoButton>
           <PlaceCardNoButton
-            card_title={topGuides[2].title}
-            description={topGuides[2].title}
-            description1={topGuides[2].description}
+            card_title={topGuides[2]?.title}
+            description={topGuides[2]?.title}
+            description1={topGuides[2]?.description}
             rootClassName="place-card-no-button-root-class-name11"
           ></PlaceCardNoButton>
         </div>

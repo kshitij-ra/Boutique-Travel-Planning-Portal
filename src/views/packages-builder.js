@@ -1,30 +1,31 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import axios from 'axios'
-import { Helmet } from 'react-helmet'
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { Helmet } from "react-helmet";
 
-import SolidButton from '../components/solid-button'
-import PlaceCardNoButton from '../components/place-card-no-button'
-import PlaceCard from '../components/place-card'
-import WorkWithUsBanner from '../components/work-with-us-banner'
-import Footer from '../components/footer'
-import './local-guides.css'
+import SolidButton from "../components/solid-button";
+import PlaceCardNoButton from "../components/place-card-no-button";
+import PlaceCard from "../components/place-card";
+import WorkWithUsBanner from "../components/work-with-us-banner";
+import Footer from "../components/footer";
+import "./local-guides.css";
+import MultiStepForm from "./MultiStepForm";
 
-const PackagesBuilder= (props) => {
-	const [guides, setGuides] = useState([]);
+const PackagesBuilder = (props) => {
+  const [guides, setGuides] = useState([]);
 
-    useEffect(() => {
-        const fetchGuides = async () => {
-            try {
-                const response = await axios.get('https://dummyjson.com/products');
-                setGuides(response.data.products);
-            } catch (error) {
-                console.error('Error fetching local guides', error);
-            }
-        };
+  useEffect(() => {
+    const fetchGuides = async () => {
+      try {
+        const response = await axios.get("https://dummyjson.com/products");
+        setGuides(response.data.products);
+      } catch (error) {
+        console.error("Error fetching local guides", error);
+      }
+    };
 
-        fetchGuides();
-    }, []);
+    fetchGuides();
+  }, []);
   return (
     <div className="local-guides-container">
       <Helmet>
@@ -100,7 +101,7 @@ const PackagesBuilder= (props) => {
                 Follow us on
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: ' ',
+                    __html: " ",
                   }}
                 />
               </span>
@@ -167,6 +168,7 @@ const PackagesBuilder= (props) => {
           </div>
         </div>
       </div>
+      <MultiStepForm />
       <div id="main-section" className="local-guides-main">
         <div className="local-guides-cards-container">
           <PlaceCardNoButton
@@ -188,19 +190,18 @@ const PackagesBuilder= (props) => {
             rootClassName="place-card-no-button-root-class-name4"
           ></PlaceCardNoButton>
           {guides.map((guide) => (
-<PlaceCardNoButton
-            card_title={guide.id}
-            description={guide.title}
-	    description1="more text"
-          ></PlaceCardNoButton>
-                
-            ))}
+            <PlaceCardNoButton
+              card_title={guide.id}
+              description={guide.title}
+              description1="more text"
+            ></PlaceCardNoButton>
+          ))}
         </div>
         <WorkWithUsBanner rootClassName="work-with-us-banner-root-class-name1"></WorkWithUsBanner>
       </div>
       <Footer rootClassName="footer-root-class-name4"></Footer>
     </div>
-  )
-}
+  );
+};
 
-export default PackagesBuilder
+export default PackagesBuilder;
