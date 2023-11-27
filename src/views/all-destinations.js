@@ -193,22 +193,12 @@ const AllDestinations = (props) => {
         </div>
       </div>
       <div id="main-section" className="all-destinations-main">
-        <h1>Explore all destinations</h1>
 	<div className="all-destinations-cards-container">
-	  {/* <PlaceCard
-            card_title="London"
-          ></PlaceCard>
-	  <PlaceCard
-            card_title="London"
-          ></PlaceCard>
-	  <PlaceCard
-            card_title="London"
-          ></PlaceCard> */}
 	  {!loading ? (
     <>
         {destinations.map((destination) => (
             <PlaceCard
-                key={destination.id}  // Adding a unique key for each iteration
+                key={destination.id}
                 card_title={destination.id}
                 description={destination.title}
             ></PlaceCard>

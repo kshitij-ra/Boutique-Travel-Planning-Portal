@@ -2,6 +2,7 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
+import SolidButton from './solid-button'
 import './ppb1.css'
 
 const PPB1 = (props) => {
@@ -141,6 +142,11 @@ const PPB1 = (props) => {
         <br></br>
         <br></br>
       </span>
+      <SolidButton
+        button="Start"
+        rootClassName="solid-button-root-class-name3"
+        onClick={props.start}
+      ></SolidButton>
     </div>
   )
 }
@@ -148,10 +154,12 @@ const PPB1 = (props) => {
 PPB1.defaultProps = {
   heading:
     'Welcome to Our Package Builder - Your Gateway to Tailored Travel Experiences!',
+  start: () => {},
 }
 
 PPB1.propTypes = {
   heading: PropTypes.string,
+  start: PropTypes.func,
 }
 
 export default PPB1

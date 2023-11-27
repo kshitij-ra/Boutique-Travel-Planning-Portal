@@ -3,6 +3,7 @@ import { useState } from "react";
 import SolidButton from '../components/solid-button.js'
 import OutlineButton from '../components/outline-button.js'
 import PPB1 from '../components/ppb1'
+import PPB2 from '../components/ppb2'
 
 
 const Nav = (props) => {
@@ -143,7 +144,7 @@ const SecondStep = (props) => {
 
   return (
     <>
-      <form style={formStyle}>
+      {/* <form style={formStyle}>
         <label htmlFor="lastName">Last Name:</label>
         <input
           type="text"
@@ -153,7 +154,8 @@ const SecondStep = (props) => {
           placeholder="Enter your last name"
           style={inputStyle}
         />
-      </form>
+      </form> */}
+      <PPB2/>
       <Stats step={2} {...props} nextStep={()=>alert(JSON.stringify(props.formState))} />
     </>
   );
