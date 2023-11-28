@@ -4,7 +4,7 @@ import './outline-button.css';
 
 const OutlineButton = (props) => {
   return (
-    <div className={`outline-button-container ${props.rootClassName}`}>
+    <div className={`outline-button-container outline-button-x-margin ${props.rootClassName}`}>
       <button className="outline-button-button button Button" onClick={props.onClick}>
         {props.button1}
       </button>

@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import SolidButton from '../components/solid-button'
-import PPB1 from '../components/ppb1'
 import Footer from '../components/footer'
 import MultiStepForm from './MultiStepForm.jsx'
 import './packages-builder.css'
@@ -155,7 +154,6 @@ const PackagesBuilder = (props) => {
       </div>
       <div id="main-section" className="packages-builder-main">
         <MultiStepForm />
-        {/* <PPB1></PPB1> */}
       </div>
       <Footer rootClassName="footer-root-class-name7"></Footer>
     </div>
