@@ -1,0 +1,66 @@
+.login-form-container {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    border-color: var(--dl-color-gray-black);
+    border-width: 1px;
+    border-radius: var(--dl-radius-radius-radius8);
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--dl-color-gray-900);
+    margin: var(--dl-space-space-doubleunit);
+  }
+  .login-form-text {
+    align-self: center;
+  }
+  .login-form-form {
+    display: flex;
+    align-self: center;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .login-form-container1 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-left: var(--dl-space-space-unit);
+    margin-right: var(--dl-space-space-unit);
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+  }
+  .login-form-label {
+    width: 250px;
+    height: 100%;
+  }
+  .login-form-textinput {
+    width: 250px;
+    height: auto;
+    border-radius: var(--dl-radius-radius-radius8);
+  }
+  .login-form-container2 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-left: var(--dl-space-space-unit);
+    margin-right: var(--dl-space-space-unit);
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+  }
+  .login-form-label1 {
+    width: 250px;
+    height: 100%;
+  }
+  .login-form-textinput1 {
+    width: 250px;
+    height: auto;
+    border-radius: var(--dl-radius-radius-radius8);
+  }
+  

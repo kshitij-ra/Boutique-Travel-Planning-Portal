@@ -1,0 +1,36 @@
+.guide-form-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.guide-form-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.guide-form-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.guide-form-cold {
+  display: flex;
+  margin-top: var(--dl-space-space-unit);
+  align-items: flex-start;
+  margin-left: var(--dl-space-space-unit);
+  margin-right: var(--dl-space-space-unit);
+  margin-bottom: var(--dl-space-space-unit);
+  flex-direction: column;
+}
+
+.guide-form-label {
+  width: 250px;
+}
+
+.guide-form-textinput,.guide-form-textarea {
+  width: 250px;
+  border-radius: var(--dl-radius-radius-radius8);
+}
